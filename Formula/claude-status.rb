@@ -16,8 +16,8 @@
 class ClaudeStatus < Formula
   desc "Status line for Claude Code"
   homepage "https://claude-status.virajp.dev"
-  url "https://github.com/virajp/claude-status/releases/download/v1.1.0/claude-status-darwin-arm64.tar.gz"
-  sha256 "3917173dacc5adbe2d297e01df8134915d4334c4d7ee17226b478352ac941a0c"
+  url "https://github.com/virajp/claude-status/releases/download/v1.1.1/claude-status-darwin-arm64.tar.gz"
+  sha256 "fd4107a1719090e1cec445827d8fce3ffc764709d95e807c3f4d30c70df0f53b"
   license "MIT"
 
   # No `version`. Homebrew scans it out of the url, and a `version` line beside
