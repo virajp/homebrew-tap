@@ -15,9 +15,9 @@
 # file is a formula `brew style` and `brew audit` can check wherever it sits.
 class ClaudeStatus < Formula
   desc "Status line for Claude Code"
-  homepage "https://claude-status-site.pages.dev"
-  url "https://github.com/virajp/claude-status/releases/download/v1.0.0/claude-status-darwin-arm64.tar.gz"
-  sha256 "7d91e4bf30188ef9fd408ad9b957380101efff3552869b1c58acfbdf2e2b6d8f"
+  homepage "https://claude-status.virajp.dev"
+  url "https://github.com/virajp/claude-status/releases/download/v1.1.0/claude-status-darwin-arm64.tar.gz"
+  sha256 "3917173dacc5adbe2d297e01df8134915d4334c4d7ee17226b478352ac941a0c"
   license "MIT"
 
   # No `version`. Homebrew scans it out of the url, and a `version` line beside
@@ -45,13 +45,15 @@ class ClaudeStatus < Formula
       This OVERWRITES any existing status line in ~/.claude/settings.json.
 
       Docs and the config generator:
-        https://claude-status-site.pages.dev
+        https://claude-status.virajp.dev
     EOS
   end
 
   test do
-    # §5 guarantees `--version` prints the bare version and nothing else, which
-    # makes it the one output shape safe to match on.
+    # `--version` prints the bare version and nothing else, which makes it the
+    # one output shape safe to match on. Pinned by
+    # `version_is_exactly_the_version_with_or_without_debug` in tests/e2e.rs,
+    # which asserts stdout equals the version exactly — not that it contains it.
     assert_match version.to_s, shell_output("#{bin}/claude-status --version")
   end
 end
