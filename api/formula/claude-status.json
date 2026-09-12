@@ -1,0 +1,14 @@
+{
+  "name": "claude-status",
+  "tap": "virajp/tap",
+  "versions": { "stable": "1.1.9" },
+  "revision": 0,
+  "keg_only": false,
+  "dependencies": [],
+  "build_dependencies": [],
+  "bottle": {},
+  "urls": { "stable": { "url": "https://github.com/virajp/claude-status/releases/download/v1.1.9/claude-status-darwin-arm64.tar.gz", "checksum": "f444536df14da209627a95c70ebc7abe9b70ba637d783d5e11f5dd4d49b389aa" } },
+  "ruby_source_path": "Formula/claude-status.rb",
+  "ruby_source_checksum": { "sha256": "3c88f8bebf8922e8756b45222b0dad38a2edda8d2cdf002d392a9e1ce20acefe" },
+  "tap_git_head": "8fed84eb7cdd0103d55b2e24aca25a4326cd71ab"
+}
