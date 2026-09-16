@@ -16,12 +16,15 @@
 class ClaudeStatus < Formula
   desc "Status line for Claude Code"
   homepage "https://claude-status.virajp.dev"
-  url "https://github.com/virajp/claude-status/releases/download/v1.1.9/claude-status-darwin-arm64.tar.gz"
-  sha256 "f444536df14da209627a95c70ebc7abe9b70ba637d783d5e11f5dd4d49b389aa"
+  url "https://github.com/virajp/claude-status/releases/download/v1.2.0/claude-status-darwin-arm64.tar.gz"
+  sha256 "83450a11be9156d3de76f40e2f55da6f44e61def556c2e74166863daf5caed1c"
   license "MIT"
 
   # No `version`. Homebrew scans it out of the url, and a `version` line beside
-  # a version-bearing url is a hard `brew audit` failure.
+  # a version-bearing url is a hard `brew audit` failure. mise's own formula
+  # shim cannot scan it — it reads the basename only — which is why the tap
+  # also carries `api/formula/claude-status.json`, rendered by
+  # `render_formula_api` in `_scripts/_rust`; mise reads that first.
 
   # `ArchRequirement` is `fatal true`, so an Intel Mac is refused with "The
   # arm64 architecture is required for this software." rather than installing
